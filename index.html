@@ -683,6 +683,39 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+        .git-button {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px 0;
+    background-color: #24292e;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.git-button:hover {
+    background-color:rgba(28, 202, 136, 0.4);
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px 0;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+        .git-button:active {
+            background-color: #005bb5;
+        }
+
 
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -771,45 +804,48 @@
             </div>
         </div>
     </section>
+<section id="projects" class="section">
+    <div class="content-section fade-in">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3 class="project-title">Personal Blog Platform</h3>
+                <p>A modern and responsive blog website featuring article publishing, user authentication, comment system, and admin panel. Built with clean UI/UX design and optimized for SEO with rich text editor and category management.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">HTML5</span>
+                </div>
+                <a class="git-button" href="https://github.com/Dattu47/blog_app.git" target="_blank">Git</a>
+            </div>
 
-    <section id="projects" class="section">
-        <div class="content-section fade-in">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 class="project-title">Personal Blog Platform</h3>
-                    <p>A modern and responsive blog website featuring article publishing, user authentication, comment system, and admin panel. Built with clean UI/UX design and optimized for SEO with rich text editor and category management.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">HTML5</span>
-                    </div>
+            <div class="project-card">
+                <h3 class="project-title">AI Quiz Generation Application</h3>
+                <p>An intelligent quiz generation system that automatically creates questions and answers using natural language processing. Features multiple question types, difficulty levels, topic-based generation, and real-time scoring with detailed analytics.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OpenAI API</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Django</span>
                 </div>
-                
-                <div class="project-card">
-                    <h3 class="project-title">AI Quiz Generation Application</h3>
-                    <p>An intelligent quiz generation system that automatically creates questions and answers using natural language processing. Features multiple question types, difficulty levels, topic-based generation, and real-time scoring with detailed analytics.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenAI API</span>
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Django</span>
-                    </div>
+                <a class="git-button" href="https://github.com/your-username/ai-quiz-app" target="_blank">Git</a>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Number Plate Detection System</h3>
+                <p>A computer vision application that detects and recognizes vehicle number plates from images and video streams. Implements advanced image processing techniques, OCR technology, and machine learning for accurate plate recognition and text extraction.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">TensorFlow</span>
                 </div>
-                
-                <div class="project-card">
-                    <h3 class="project-title">Number Plate Detection System</h3>
-                    <p>A computer vision application that detects and recognizes vehicle number plates from images and video streams. Implements advanced image processing techniques, OCR technology, and machine learning for accurate plate recognition and text extraction.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">TensorFlow</span>
-                    </div>
-                </div>
+                <a class="git-button" href="https://github.com/your-username/number-plate-detector" target="_blank">Git</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section id="contact" class="section">
         <div class="content-section fade-in">
