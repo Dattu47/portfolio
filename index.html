@@ -683,7 +683,209 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+ /* Container for horizontal button layout */
+.button-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.git-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00d4ff 0%, #00a6fb 50%, #0077b6 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 15px rgba(0, 212, 255, 0.3),
+        0 2px 8px rgba(0, 119, 182, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    min-width: 80px;
+    margin-top: 15px;
+    align-self: flex-start;
+}
 
+/* Animated shine effect */
+.git-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent
+    );
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+/* Outer glow effect */
+.git-button::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, #00d4ff, #00a6fb, #0077b6);
+    border-radius: 28px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: blur(10px);
+}
+
+.git-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 8px 30px rgba(0, 212, 255, 0.4),
+        0 4px 15px rgba(0, 166, 251, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #00a6fb 0%, #00d4ff 50%, #0096c7 100%);
+}
+
+.git-button:hover::before {
+    left: 100%;
+}
+
+.git-button:hover::after {
+    opacity: 0.7;
+}
+
+.git-button:active {
+    transform: translateY(-1px) scale(1.02);
+    transition: all 0.15s ease;
+    box-shadow: 
+        0 4px 15px rgba(0, 212, 255, 0.35),
+        0 2px 8px rgba(0, 119, 182, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Focus state for accessibility */
+.git-button:focus {
+    outline: 3px solid rgba(0, 212, 255, 0.5);
+    outline-offset: 3px;
+}
+
+/* Enhanced project card integration */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.project-card .git-button {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Alternative button styles for variety */
+.git-button.github {
+    background: linear-gradient(135deg, #24292e 0%, #586069 50%, #24292e 100%);
+    box-shadow: 
+        0 4px 15px rgba(36, 41, 46, 0.3),
+        0 2px 8px rgba(88, 96, 105, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.git-button.github:hover {
+    background: linear-gradient(135deg, #586069 0%, #24292e 50%, #1b1f23 100%);
+    box-shadow: 
+        0 8px 30px rgba(36, 41, 46, 0.4),
+        0 4px 15px rgba(88, 96, 105, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.git-button.github::after {
+    background: linear-gradient(135deg, #24292e, #586069);
+}
+
+/* Purple variant for special projects */
+.git-button.featured {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    box-shadow: 
+        0 4px 15px rgba(102, 126, 234, 0.3),
+        0 2px 8px rgba(118, 75, 162, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.git-button.featured:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 50%, #f093fb 100%);
+    box-shadow: 
+        0 8px 30px rgba(102, 126, 234, 0.4),
+        0 4px 15px rgba(118, 75, 162, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.git-button.featured::after {
+    background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .git-button {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        min-width: 70px;
+        margin-top: 12px;
+    }
+    
+    .git-button:hover {
+        transform: translateY(-2px) scale(1.03);
+    }
+}
+
+@media (max-width: 480px) {
+    .git-button {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+        border-radius: 20px;
+        min-width: 60px;
+    }
+    
+    .projects-grid .project-card .git-button {
+        align-self: center;
+        margin: 15px auto 0;
+    }
+}
+
+/* Pulse animation for featured projects */
+@keyframes cyan-pulse {
+    0%, 100% {
+        box-shadow: 
+            0 4px 20px rgba(0, 212, 255, 0.3),
+            0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    }
+    50% {
+        box-shadow: 
+            0 6px 25px rgba(0, 212, 255, 0.5),
+            0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+    }
+}
+
+.git-button.featured {
+    animation: cyan-pulse 3s ease-in-out infinite;
+}
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -772,44 +974,48 @@
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="content-section fade-in">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 class="project-title">Personal Blog Platform</h3>
-                    <p>A modern and responsive blog website featuring article publishing, user authentication, comment system, and admin panel. Built with clean UI/UX design and optimized for SEO with rich text editor and category management.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">HTML5</span>
-                    </div>
+  <section id="projects" class="section">
+    <div class="content-section fade-in">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3 class="project-title">Simple Blog Website</h3>
+                <p>A modern and responsive blog website featuring article publishing,admin panel. Built with clean UI/UX design and optimized for SEO with rich text editor and category management.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">HTML5</span>
                 </div>
-                
-                <div class="project-card">
-                    <h3 class="project-title">AI Quiz Generation Application</h3>
-                    <p>An intelligent quiz generation system that automatically creates questions and answers using natural language processing. Features multiple question types, difficulty levels, topic-based generation, and real-time scoring with detailed analytics.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenAI API</span>
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Django</span>
-                    </div>
+                <a class="git-button" href="https://github.com/Dattu47/blog_app.git" target="_blank">Git</a>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">AI Quiz Generation Application</h3>
+                <p>An intelligent quiz generation system that automatically creates questions and answers using natural language processing. Features multiple question types, difficulty levels, topic-based generation, and real-time scoring with detailed analytics.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OpenAI API</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Django</span>
                 </div>
-                
-                <div class="project-card">
-                    <h3 class="project-title">Number Plate Detection System</h3>
-                    <p>A computer vision application that detects and recognizes vehicle number plates from images and video streams. Implements advanced image processing techniques, OCR technology, and machine learning for accurate plate recognition and text extraction.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">TensorFlow</span>
-                    </div>
+                <a class="git-button" href="https://github.com/your-username/ai-quiz-app" target="_blank">Git</a>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Number Plate Detection System</h3>
+                <p>A computer vision application that detects and recognizes vehicle number plates from images and video streams. Implements advanced image processing techniques, OCR technology, and machine learning for accurate plate recognition and text extraction.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">TensorFlow</span>
                 </div>
+                <a class="git-button" href="https://github.com/your-username/number-plate-detector" target="_blank">Git</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section id="contact" class="section">
         <div class="content-section fade-in">
