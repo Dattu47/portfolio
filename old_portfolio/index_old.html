@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dattatreya Pedapudi - B-Tech Portfolio</title>
+
+<link href="style.css" rel="stylesheet"/></head>
+<body>
+<!-- Loading overlay -->
+<div class="loading-overlay" id="loadingOverlay">
+<div class="loading-spinner"></div>
+</div>
+<!-- Animated background particles -->
+<div class="bg-particles" id="particles"></div>
+<nav class="navbar">
+<div class="nav-container">
+<a class="logo" href="#home">Dattatreya Pedapudi</a>
+<ul class="nav-menu">
+<li><a class="nav-link" href="#home">Home</a></li>
+<li><a class="nav-link" href="#about">About</a></li>
+<li><a class="nav-link" href="#projects">Projects</a></li>
+<li><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+<div class="mobile-menu">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</nav>
+<section class="section hero" id="home">
+<div class="hero-content">
+<h1>Hello , I'm Dattatreya</h1>
+<p class="hero-subtitle">B-Tech Final Year Student | Computer Science Engineering</p>
+<p class="hero-description">Passionate about Full Stack Development &amp; AI/ML</p>
+<a class="cta-button" href="#projects">Explore My Work</a>
+</div>
+</section>
+<section class="section" id="about">
+<div class="content-section fade-in">
+<h2 class="section-title">About Me</h2>
+<div class="about-content">
+<div class="profile-img">DP</div>
+<div class="about-text">
+<p>
+                        I'm a final year Computer Science Engineering student with a passion for creating innovative solutions through technology. Currently pursuing my B-Tech degree, I specialize in full-stack web development, machine learning, and mobile app development.
+                    </p>
+<p>
+                        My journey in tech has been driven by curiosity and a desire to solve real-world problems. I enjoy working on projects that challenge me to learn new technologies and push the boundaries of what's possible.
+                    </p>
+<p>
+                        When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or mentoring junior students in programming fundamentals.
+                    </p>
+</div>
+</div>
+<div class="skills">
+<div class="skill-item">
+<h3>Frontend Development</h3>
+<p>React, JavaScript, HTML5, CSS3</p>
+</div>
+<div class="skill-item">
+<h3>Backend Development</h3>
+<p>Node.js, Flask</p>
+</div>
+<div class="skill-item">
+<h3>Database</h3>
+<p>MySQL, Firebase</p>
+</div>
+<div class="skill-item">
+<h3>Machine Learning</h3>
+<p>Python, TensorFlow, Scikit-learn</p>
+</div>
+<div class="skill-item">
+<h3>Data analytics</h3>
+<p>Ms Excel, Power BI</p>
+</div>
+<div class="skill-item">
+<h3>Tools &amp; Technologies</h3>
+<p>Git, Canva, VS Code</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="projects">
+<div class="content-section fade-in">
+<h2 class="section-title">Projects</h2>
+<div style="text-align:center; margin-bottom: 2rem;">
+<button class="cta-button" onclick="showProjects('fullstack')">Fullstack / Web Design</button>
+<button class="cta-button" onclick="showProjects('ml')">AI / ML</button>
+</div>
+<!-- Fullstack / Web Design Projects -->
+<div id="fullstack-projects">
+<div class="project-card">
+<h3 class="project-title">SocialBlogX – A Mini Blog Platform</h3>
+<p>A dynamic and interactive blog platform where users can register, log in, and create text/image posts similar to Facebook. Features include post viewing, likes, and commenting by all users. Admin panel allows for management of posts and user accounts with delete privileges.</p>
+<div class="project-tech">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">Flask</span>
+<span class="tech-tag">Firebase</span>
+<span class="tech-tag">HTML5</span>
+<span class="tech-tag">CSS</span>
+</div>
+<a class="git-button" href="https://github.com/Dattu47/blog_app.git" target="_blank">Git</a>
+</div>
+<div class="project-card">
+<h3 class="project-title">VisionMart – Smart Customer Tracking &amp; Analytics Dashboard</h3>
+<p>A web application that monitors customer demographics in a store, categorizing them by gender and age groups (teen, adult, senior). Includes an admin dashboard that displays real-time analytics with pie and bar charts for insightful decision-making.</p>
+<div class="project-tech">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">Flask</span>
+<span class="tech-tag">MySQL</span>
+<span class="tech-tag">Chart.js</span>
+<span class="tech-tag">HTML/CSS</span>
+</div>
+<a class="git-button" href="https://github.com/your-username/smart-mart-app" target="_blank">Git</a>
+</div>
+<div class="project-card">
+<h3 class="project-title">Frozen Bliss – Online Ice Cream Ordering Portal
+
+</h3>
+<p>A user-friendly web application that allows customers to browse and order ice creams online. Features include an interactive menu, order cart, and responsive UI optimized for mobile and desktop users.</p>
+<div class="project-tech">
+<span class="tech-tag">HTML</span>
+<span class="tech-tag">CSS</span>
+<span class="tech-tag">JavaScript</span>
+<span class="tech-tag">Firebase</span>
+</div>
+<a class="git-button" href="https://github.com/your-username/icecream-order-app" target="_blank">Git</a>
+</div>
+<div class="project-card">
+<h3 class="project-title">CampusEcho – Digital Feedback System for Colleges</h3>
+<p>A digital feedback system for colleges that enables students and staff to submit suggestions or feedback anonymously. The admin portal provides the ability to review, categorize, and manage feedback in real-time.</p>
+<div class="project-tech">
+<span class="tech-tag">PHP</span>
+<span class="tech-tag">MySQL</span>
+<span class="tech-tag">HTML</span>
+<span class="tech-tag">CSS</span>
+</div>
+<a class="git-button" href="https://github.com/your-username/college-feedback-system" target="_blank">Git</a>
+</div>
+</div>
+<!-- AI / ML Projects -->
+<div id="ml-projects" style="display:none;">
+<div class="project-card">
+<h3 class="project-title">IQ Ignite – AI Quiz Generation Application</h3>
+<p>An intelligent quiz generation system that automatically creates questions and answers using natural language processing. Features multiple question types, difficulty levels, topic-based generation, and real-time scoring with detailed analytics.</p>
+<div class="project-tech">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">OpenAI API</span>
+<span class="tech-tag">Machine Learning</span>
+<span class="tech-tag">Django</span>
+</div>
+<a class="git-button" href="https://github.com/your-username/ai-quiz-app" target="_blank">Git</a>
+</div>
+<div class="project-card">
+<h3 class="project-title">PlateScan Pro – Intelligent Number Plate Recognition System</h3>
+<p>A computer vision application that detects and recognizes vehicle number plates from images and video streams. Implements advanced image processing techniques, OCR technology, and machine learning for accurate plate recognition and text extraction.</p>
+<div class="project-tech">
+<span class="tech-tag">Python</span>
+<span class="tech-tag">OpenCV</span>
+<span class="tech-tag">TensorFlow</span>
+</div>
+<a class="git-button" href="https://github.com/your-username/number-plate-detector" target="_blank">Git</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="contact">
+<div class="content-section fade-in">
+<h2 class="section-title">Get In Touch</h2>
+<div class="contact-info">
+<div class="contact-item">
+<div class="contact-icon">📧</div>
+<h3>Email</h3>
+<p>dattatreya448@gmail.com</p>
+</div>
+<div class="contact-item">
+<div class="contact-icon">📱</div>
+<h3>Phone</h3>
+<p>+91 9390447466</p>
+</div>
+<div class="contact-item clickable-link" onclick="window.open('https://www.linkedin.com/in/dattatreya-pedapudi-89694628b/', '_blank')">
+<div class="contact-icon">💼</div>
+<h3>LinkedIn</h3>
+<p>Visit Profile</p>
+</div>
+<div class="contact-item clickable-link" onclick="window.open('https://github.com/Dattu47', '_blank')">
+<div class="contact-icon">🐙</div>
+<h3>GitHub</h3>
+<p>View Repositories</p>
+</div>
+<div class="contact-item clickable-link" onclick="downloadResume()">
+<div class="contact-icon">📄</div>
+<h3>Resume</h3>
+<p>Download CV</p>
+</div>
+</div>
+<form id="contact-form" action=https://formspree.io/f/mjkogjka method="POST" >
+<div class="form-group">
+<label for="name">Name</label>
+<input id="name" name="name" placeholder="Your full name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input id="email" name="email" placeholder="your.email@example.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="subject">Subject</label>
+<input id="subject" name="subject" placeholder="What's this about?" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea id="message" name="message" placeholder="Tell me more..." required="" rows="5"></textarea>
+</div>
+<button class="cta-button" style="width: 100%; margin-top: 1rem;" type="submit">Send Message</button>
+<p id="form-status" style="text-align: center; margin-top: 1rem;"></p>
+</form>
+</div>
+</section>
+
+<script src="script.js"></script></body>
+</html>
